@@ -1,0 +1,15 @@
+#bin
+.idea
+__pycache__
+
+#conf
+data
+
+#logs
+logs.log
+
+#db is hidden for now
+utils/db
+
+#costs is hidden for now
+utils/costs.py
