@@ -173,10 +173,10 @@ def invoice(message):
     order_txt = "\n".join(order)
     comment = f"\n<b>Комментарий:</b>\n{res[3]}\n" if algs.trim(res[3]) != "" else "\n"
 
-    bot.send_message(channel, f"#{res[0]}"
-                              f"\n<b>Имя:</b> {name}"
-                              f"\n<b>Заказ:</b>"
-                              f"\n{order_txt}"
-                              f"{comment}"
-                              f"\n/cook"
-                              f"\n/ready", parse_mode="HTML")
+    bot.send_message(channel, f"#{res[0]}\n"
+                              f"<b>Имя:</b> {name}\n"
+                              f"<b>Заказ:</b>\n"
+                              f"{order_txt}"
+                              f"{comment}\n"
+                              f"/cook\n"
+                              f"/ready", parse_mode="HTML")

@@ -33,7 +33,7 @@ def confirm_quiz_start() -> InlineKeyboardMarkup:
     return markup
 
 
-def quiz(cur_num: int, r_ans: int) -> InlineKeyboardMarkup:
+def quiz(cur_num: int, r_ans: str) -> InlineKeyboardMarkup:
     """
     Клавиатура режима "Викторина"
     :param cur_num: номер текущего вопроса

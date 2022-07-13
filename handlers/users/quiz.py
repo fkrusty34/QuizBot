@@ -112,12 +112,12 @@ def quiz(call):
     except Exception:
         pass
 
-    text = f"<b>Вопрос №{num + 1}</b>" \
-           f"\n{que}" \
-           f"\n<b>A)</b> {ans[0]}" \
-           f"\n<b>B)</b> {ans[1]}" \
-           f"\n<b>C)</b> {ans[2]}" \
-           f"\n<b>D)</b> {ans[3]}"
+    text = f"<b>Вопрос №{num + 1}</b>\n" \
+           f"{que}\n" \
+           f"<b>A)</b> {ans[0]}\n" \
+           f"<b>B)</b> {ans[1]}" \
+           f"<b>C)</b> {ans[2]}\n" \
+           f"<b>D)</b> {ans[3]}\n\n"
 
     con.close()
 
@@ -130,7 +130,7 @@ def quiz(call):
         if int(res[0]) != num:
             con.close()
             return
-        bot.edit_message_text(text + f"\nОсталось {i} "
+        bot.edit_message_text(text + f"Осталось {i} "
                                      f"{'секунда' if i % 10 in [1] else 'секунды' if i % 10 in [2, 3, 4] else 'секунд'}"
                               , chat_id=call.message.chat.id, message_id=call.message.id,
                               parse_mode="HTML", reply_markup=markup)
